@@ -1,4 +1,5 @@
 # 11ty StartBootstrap Coming Soon
+[Demo soon.000000076.xyz](https://soon.000000076.xyz)
 
 Eleventy (11ty) port of the Start Bootstrap Coming Soon theme using:
 
@@ -11,8 +12,7 @@ Eleventy (11ty) port of the Start Bootstrap Coming Soon theme using:
 
 ```bash
 npm install
-npm run build
-npm start
+npx @11ty/eleventy --serve
 ```
 
 Build output goes to `_site`.

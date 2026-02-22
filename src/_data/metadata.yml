@@ -1,7 +1,7 @@
 site_name: Coming Soon
 title: "Coming Soon - Start Bootstrap Theme"
 description: "A simple coming soon page with video background and Formspree signup."
-url: "https://example.com"
+url: "https://soon.000000076.xyz"
 author: "Start Bootstrap"
 copyright_holder: "Start Bootstrap"
 language: "en"
@@ -29,6 +29,7 @@ robots:
   allow: "/"
 humans:
   team: "Site Team"
-  contact: "hello@example.com"
+  name: "Adam DJ Brett"
+  contact: "info@adamdjbrett.com"
   location: "Remote"
-xmit_site: "example.com@000"
+xmit_site: "soon.000000076.xyz@268"
