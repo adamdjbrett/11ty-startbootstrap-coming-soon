@@ -3,14 +3,28 @@
     position: relative;
     z-index: 2;
 
-    .btn {
+    .social-icons-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-top: 1rem;
+    }
+
+    .social-link {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 0;
+        margin: 1rem;
         height: 4rem;
         width: 4rem;
         border-radius: 100rem;
+        border: 1px solid #212529;
+        background-color: #212529;
+        color: #ffffff;
+        text-decoration: none;
     }
 
     .social-icon-svg {
@@ -28,5 +42,10 @@
         top: 0;
         right: 2.5rem;
         width: auto;
+    }
+
+    .social-icons .social-icons-inner {
+        flex-direction: column;
+        margin-top: 0;
     }
 }

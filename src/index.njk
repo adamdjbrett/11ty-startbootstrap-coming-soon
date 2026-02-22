@@ -15,28 +15,24 @@ layout: layouts/base.njk
 </video>
 
 <main id="main-content" class="masthead" tabindex="-1">
-  <section class="masthead-content text-white" aria-labelledby="coming-soon-title">
-    <div class="container-fluid px-4 px-lg-0">
-      <h1 id="coming-soon-title" class="fst-italic lh-1 mb-4">{{ metadata.hero_heading }}</h1>
-      <p class="mb-5">{{ metadata.hero_message }}</p>
+  <section class="masthead-content" aria-labelledby="coming-soon-title">
+    <div class="masthead-inner">
+      <h1 id="coming-soon-title" class="masthead-title">{{ metadata.hero_heading }}</h1>
+      <p class="masthead-lead">{{ metadata.hero_message }}</p>
 
       <form id="contactForm" action="https://formspree.io/f/{{ metadata.formspree_key }}" method="POST" novalidate>
-        <div class="row input-group-newsletter" role="group" aria-labelledby="email-label">
-          <div class="col">
-            <label class="visually-hidden" id="email-label" for="email">Email address</label>
-            <input
-              class="form-control"
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Enter email address..."
-              autocomplete="email"
-              required
-            />
-          </div>
-          <div class="col-auto">
-            <button class="btn btn-primary" id="submitButton" type="submit">{{ metadata.form_submit_label }}</button>
-          </div>
+        <div class="input-group-newsletter" role="group" aria-labelledby="email-label">
+          <label class="visually-hidden" id="email-label" for="email">Email address</label>
+          <input
+            class="newsletter-input"
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter email address..."
+            autocomplete="email"
+            required
+          />
+          <button class="newsletter-button" id="submitButton" type="submit">{{ metadata.form_submit_label }}</button>
         </div>
       </form>
     </div>
@@ -44,9 +40,9 @@ layout: layouts/base.njk
 </main>
 
 <nav class="social-icons" aria-label="Social media links">
-  <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+  <div class="social-icons-inner">
     {% for social in metadata.social_links %}
-      <a class="btn btn-dark m-3" href="{{ social.url }}" aria-label="{{ social.name }}">
+      <a class="social-link" href="{{ social.url }}" aria-label="{{ social.name }}">
         {% if social.name == "Twitter" %}
           <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" class="social-icon-svg">
             <path fill="currentColor" d="M23 3.01a9.14 9.14 0 0 1-2.64.77 4.57 4.57 0 0 0 2.01-2.52 9.02 9.02 0 0 1-2.9 1.13 4.52 4.52 0 0 0-7.79 3.1c0 .36.04.72.12 1.06A12.83 12.83 0 0 1 2.25 2.2a4.54 4.54 0 0 0 1.4 6.06 4.45 4.45 0 0 1-2.04-.58v.06c0 2.2 1.55 4.03 3.6 4.45a4.45 4.45 0 0 1-2.03.08 4.52 4.52 0 0 0 4.22 3.15A9.06 9.06 0 0 1 1 17.28a12.77 12.77 0 0 0 6.92 2.03c8.3 0 12.84-6.98 12.84-13.02l-.01-.59A9.25 9.25 0 0 0 23 3.01z"/>

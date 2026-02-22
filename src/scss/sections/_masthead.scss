@@ -25,37 +25,67 @@
     .masthead-content {
         position: relative;
         max-width: 40rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+    }
 
-        h1 {
-            font-size: 2.5rem;
+    .masthead-inner {
+        padding: 5rem 1.5rem;
+    }
+
+    .masthead-title {
+        font-size: 2.5rem;
+        font-style: italic;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+        color: $white;
+    }
+
+    .masthead-lead {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        color: $white;
+
+        strong {
+            font-weight: 700;
         }
+    }
 
-        p {
-            font-size: 1.2rem;
+    // Styling for the signup form input
+    .input-group-newsletter {
+        display: flex;
+        gap: 0.5rem;
+        align-items: stretch;
+    }
 
-            strong {
-                font-weight: 700;
-            }
-        }
+    .newsletter-input {
+        height: auto;
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.375rem;
+        background-color: $white;
+        color: #212529;
+        min-width: 0;
+    }
 
-        // Styling for the signup form input
+    .newsletter-button {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: calc(1rem + 2px);
+        border: 1px solid #0d6efd;
+        border-radius: 0.375rem;
+        background-color: #0d6efd;
+        color: $white;
+        line-height: 1.2;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    @media (max-width: 575px) {
         .input-group-newsletter {
-            input {
-                height: auto;
-                width: 100%;
-                font-size: 1rem;
-                padding: 1rem;
-            }
-
-            button {
-                font-size: 0.85rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                padding: calc(1rem + 2px);
-            }
+            flex-direction: column;
         }
     }
 }
@@ -75,19 +105,23 @@
         }
 
         .masthead-content {
+            max-width: none;
+        }
+
+        .masthead-inner {
             padding-top: 0;
             padding-bottom: 0;
             padding-left: 2rem;
             padding-right: 9rem;
+            max-width: 40rem;
+        }
 
-            h1 {
-                font-size: 3.5rem;
-            }
+        .masthead-title {
+            font-size: 3.5rem;
+        }
 
-            p {
-                font-size: 1.3rem;
-            }
-
+        .masthead-lead {
+            font-size: 1.3rem;
         }
     }
 }

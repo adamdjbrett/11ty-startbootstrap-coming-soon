@@ -1,0 +1,17 @@
+.site-footer {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-underline-offset: 0.2em;
+}

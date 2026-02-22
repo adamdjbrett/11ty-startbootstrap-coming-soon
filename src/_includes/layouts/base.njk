@@ -17,6 +17,8 @@
     <link rel="icon" type="image/x-icon" href="{{ metadata.favicon }}" />
     <link rel="preload" href="/css/styles.css" as="style" />
     <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="preload" href="/assets/css/deferred.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/assets/css/deferred.css" /></noscript>
     <style>
       html,
       body {
@@ -54,12 +56,6 @@
       }
       .skip-link:focus {
         transform: translateY(0);
-      }
-      .site-footer {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-        padding: 1rem;
       }
     </style>
     <script>
