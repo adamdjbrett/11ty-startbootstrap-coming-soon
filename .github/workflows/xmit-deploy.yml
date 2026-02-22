@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Target site/domain for XMIT deploy
-      XMIT_SITE: example.com@000
+      XMIT_SITE: soon.000000076.xyz@268
     steps:
       - name: Checkout
         uses: actions/checkout@v4
