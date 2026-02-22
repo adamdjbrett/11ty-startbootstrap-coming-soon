@@ -7,6 +7,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100dvh;
+    width: min(75vw, 100%);
+    padding-bottom: 4.25rem;
 
     // Overlay for the masthead
     &:before {
@@ -28,7 +31,7 @@
     }
 
     .masthead-inner {
-        padding: 5rem 1.5rem;
+        padding: clamp(1.25rem, 3.5vh, 2.25rem) clamp(1rem, 3vw, 2rem);
     }
 
     .masthead-title {
@@ -93,10 +96,9 @@
 // Styling for the masthead at the large breakpoint and up
 @media (min-width: $breakpoint-lg) {
     .masthead {
-        height: 100%;
+        min-height: 100dvh;
         width: 75vw;
-        min-height: 0;
-        padding-bottom: 0;
+        padding-bottom: 4.25rem;
 
         // Adds a skew effect to the masthead overlay
         &:before {
@@ -109,8 +111,8 @@
         }
 
         .masthead-inner {
-            padding-top: 0;
-            padding-bottom: 0;
+            padding-top: clamp(1.25rem, 2.5vh, 2rem);
+            padding-bottom: clamp(1.25rem, 2.5vh, 2rem);
             padding-left: 2rem;
             padding-right: 9rem;
             max-width: 40rem;
@@ -130,5 +132,12 @@
 @media (min-width: $breakpoint-xl) {
     .masthead {
         width: 65vw;
+    }
+}
+
+@media (max-width: #{$breakpoint-lg - 1px}) {
+    .masthead {
+        width: 100%;
+        padding-bottom: 7rem;
     }
 }

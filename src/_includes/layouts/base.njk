@@ -15,18 +15,21 @@
     <link rel="canonical" href="{{ page.url | toAbsoluteUrl(metadata.url) }}" />
     <title>{{ title or metadata.title }}</title>
     <link rel="icon" type="image/x-icon" href="{{ metadata.favicon }}" />
-    <link rel="preload" href="/css/styles.css" as="style" />
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="preload" href="/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/css/styles.css" /></noscript>
     <link rel="preload" href="/assets/css/deferred.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/assets/css/deferred.css" /></noscript>
     <style>
       html,
       body {
         height: 100%;
+        margin: 0;
+        overflow: hidden;
       }
       body {
-        margin: 0;
         position: relative;
+        display: flex;
+        flex-direction: column;
         background: {{ metadata.theme_color }};
         color: #fff;
       }
@@ -36,11 +39,48 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100%;
+        min-height: 100dvh;
+        width: min(75vw, 100%);
+        padding-bottom: 4.25rem;
       }
       .masthead-content {
+        width: 100%;
         max-width: 40rem;
-        padding: 5rem 1.5rem;
+      }
+      .masthead-inner {
+        padding: clamp(1.25rem, 3.5vh, 2.25rem) clamp(1rem, 3vw, 2rem);
+      }
+      .masthead-title {
+        margin: 0 0 1rem;
+        font-size: clamp(1.8rem, 4.8vw, 3.2rem);
+        line-height: 1;
+        font-style: italic;
+      }
+      .masthead-lead {
+        margin: 0 0 1.25rem;
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
+      }
+      .input-group-newsletter {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .newsletter-input {
+        width: 100%;
+        min-width: 0;
+        padding: 0.9rem 1rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.375rem;
+      }
+      .newsletter-button {
+        padding: 0.9rem 1rem;
+        border: 1px solid #0d6efd;
+        border-radius: 0.375rem;
+        background: #0d6efd;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+        white-space: nowrap;
       }
       .skip-link {
         position: absolute;
@@ -56,6 +96,70 @@
       }
       .skip-link:focus {
         transform: translateY(0);
+      }
+      .social-icons {
+        position: relative;
+        z-index: 3;
+      }
+      .social-icons-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .social-link {
+        display: inline-flex;
+        width: 3.3rem;
+        height: 3.3rem;
+        margin: 0.5rem;
+        border-radius: 999px;
+        background: #212529;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+      .social-icon-svg {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+      .site-footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
+      .site-footer p {
+        margin: 0;
+      }
+      .site-footer a {
+        color: #fff;
+      }
+      @media (max-width: 991px) {
+        .masthead {
+          width: 100%;
+          padding-bottom: 7rem;
+        }
+      }
+      @media (max-width: 575px) {
+        .input-group-newsletter {
+          flex-direction: column;
+        }
+      }
+      @media (min-width: 992px) {
+        .social-icons {
+          position: absolute;
+          top: 0;
+          right: 2.5rem;
+          height: 100%;
+        }
+        .social-icons-inner {
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+        }
       }
     </style>
     <script>
