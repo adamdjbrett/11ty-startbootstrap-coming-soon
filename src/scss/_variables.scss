@@ -1,6 +1,2 @@
-// 
-// Variables
-// 
-
-@import "./variables/colors";
-@import "./variables/typography";
+@forward "./variables/colors";
+@forward "./variables/typography";

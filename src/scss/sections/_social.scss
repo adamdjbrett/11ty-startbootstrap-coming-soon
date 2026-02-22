@@ -1,7 +1,3 @@
-// 
-// Social
-// 
-
 // Styling for the social icons
 .social-icons {
     position: relative;
@@ -16,10 +12,16 @@
         width: 4rem;
         border-radius: 100rem;
     }
+
+    .social-icon-svg {
+        width: 1.35rem;
+        height: 1.35rem;
+        display: block;
+    }
 }
 
 // Moves the social icons to the center right of the screen on large screen sizes and up
-@include media-breakpoint-up(lg) {
+@media (min-width: 992px) {
     .social-icons {
         position: absolute;
         height: 100%;

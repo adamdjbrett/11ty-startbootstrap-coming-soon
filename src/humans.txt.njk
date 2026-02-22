@@ -1,0 +1,38 @@
+---
+permalink: /humans.txt
+eleventyExcludeFromCollections: true
+---
+/* TEAM */
+Name: {{ metadata.humans.team }}
+Contact: {{ metadata.humans.contact }}
+Location: {{ metadata.humans.location }}
+
+{% if gitPeople.authors and gitPeople.authors.length %}
+Git Authors:
+{% for person in gitPeople.authors %}
+- {{ person.name }}{% if person.github %} (github.com/{{ person.github }}){% endif %}{% if person.email %} <{{ person.email }}>{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if gitPeople.contributors and gitPeople.contributors.length %}
+Git Contributors:
+{% for person in gitPeople.contributors %}
+- {{ person.name }}{% if person.github %} (github.com/{{ person.github }}){% endif %}{% if person.email %} <{{ person.email }}>{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if gitPeople.coAuthors and gitPeople.coAuthors.length %}
+Git Co-authors:
+{% for person in gitPeople.coAuthors %}
+- {{ person.name }}{% if person.github %} (github.com/{{ person.github }}){% endif %}{% if person.email %} <{{ person.email }}>{% endif %}
+{% endfor %}
+{% endif %}
+
+/* THANKS */
+- Start Bootstrap (https://startbootstrap.com/)
+- 11ty / Eleventy (https://11ty.dev/)
+
+/* SITE */
+Site: {{ metadata.site_name }}
+URL: {{ metadata.url }}
+Last updated: {{ "now" | isoDate }}

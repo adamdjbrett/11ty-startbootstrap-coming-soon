@@ -1,0 +1,34 @@
+site_name: Coming Soon
+title: "Coming Soon - Start Bootstrap Theme"
+description: "A simple coming soon page with video background and Formspree signup."
+url: "https://example.com"
+author: "Start Bootstrap"
+copyright_holder: "Start Bootstrap"
+language: "en"
+favicon: "/assets/favicon.ico"
+theme_color: "#2f3d64"
+hero_heading: "Our Website is Coming Soon"
+hero_message: "We're working hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!"
+hero_image_webp: "/assets/img/bg-mobile-fallback.webp"
+hero_image_jpg: "/assets/img/bg-mobile-fallback.jpg"
+hero_video_mp4: "/assets/mp4/bg.mp4"
+formspree_key: "your-formspree-id"
+form_submit_label: "Notify Me!"
+social_links:
+  - name: Twitter
+    short_label: "X"
+    url: "https://twitter.com/"
+  - name: Facebook
+    short_label: "FB"
+    url: "https://facebook.com/"
+  - name: Instagram
+    short_label: "IG"
+    url: "https://instagram.com/"
+robots:
+  user_agent: "*"
+  allow: "/"
+humans:
+  team: "Site Team"
+  contact: "hello@example.com"
+  location: "Remote"
+xmit_site: "example.com@000"
